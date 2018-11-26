@@ -206,21 +206,21 @@ if __name__ == '__main__':
     method = sys.argv[1]
     cluster = load_cluster(sys.argv[2])
 
-    s_leading =  leading(cluster)
-    s_orig = orig(cluster)
-    s_best_avg = best_avg(cluster)
-    s_simplified = simplified(cluster)
+    # s_leading =  leading(cluster)
+    # s_orig = orig(cluster)
+    # s_best_avg = best_avg(cluster)
+    # s_simplified = simplified(cluster)
+    #
+    # print s_leading
+    # for s in [s_orig, s_best_avg, s_simplified]:
+    #     print "Rouge score:" + str(get_rouge_score(s_leading, s))
+    #     print s
 
-    print s_leading
-    for s in [s_orig, s_best_avg, s_simplified]:
-        print "Rouge score:" + str(get_rouge_score(s_leading, s))
-        print s
-
-    # if method == 'orig':
-    #     print orig(cluster)
-    # elif method == 'best-avg':
-    #     print best_avg(cluster)
-    # elif method == 'simplified':
-    #     print simplified(cluster)
-    # else:
-    #     print "UNKNOWN METHOD"
+    if method == 'orig':
+        print orig(cluster)
+    elif method == 'best-avg':
+        print best_avg(cluster)
+    elif method == 'simplified':
+        print simplified(cluster)
+    else:
+        print "UNKNOWN METHOD"
